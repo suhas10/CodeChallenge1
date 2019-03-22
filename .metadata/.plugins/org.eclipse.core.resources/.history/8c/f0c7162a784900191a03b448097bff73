@@ -1,0 +1,7 @@
+package com.jlp.format;
+
+public class FormatTime {
+	public void getTime(Integer seconds) {
+		
+	}
+}

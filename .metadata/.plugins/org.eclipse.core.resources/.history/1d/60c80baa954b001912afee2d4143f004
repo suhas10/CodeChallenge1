@@ -1,0 +1,23 @@
+package com.jlp;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import com.jlp.format.TimeConverter;
+
+public class App {
+	public static void main(String[] args) {
+		try {
+			TimeConverter time = new TimeConverter();	
+			BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+			int seconds;
+			System.out.println("Please enter the number");
+			seconds = input.read();		
+			System.out.println( time.formatTime(seconds));
+		}//try
+		catch (Exception e) {
+			// TODO: handle exception
+		}//catch
+
+	}//main()
+}

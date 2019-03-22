@@ -1,0 +1,10 @@
+package com.jlp.format;
+
+public class FormatTime {
+	private String output;
+	public void getTime(Integer seconds) {
+		if(seconds == 0 ) {
+			System.out.println("None");
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package com.jlp;
+
+import com.jlp.format.TimeConverter;
+
+public class App {
+
+	public static void main(String[] args) {
+		TimeConverter time = new TimeConverter();	
+		System.out.println( time.formatTime(86450123));
+	}
+
+}

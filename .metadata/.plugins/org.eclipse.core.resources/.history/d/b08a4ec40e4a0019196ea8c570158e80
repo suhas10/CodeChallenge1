@@ -1,0 +1,16 @@
+package com.jlp.format;
+
+public class FormatTime {
+	private String output;
+	private Integer remainingSeconds, day,hour,mintues,seconds;
+	
+	public void getTime(Integer seconds) 
+	{
+		if(seconds == 0 ) 
+		{
+			output += "none";
+		}//if
+		
+		
+	}//getTime()
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;mintues&apos; in &apos;com.jlp.format.FormatTime&apos; to &apos;minutes&apos;&#x0D;&#x0A;- Original project: &apos;TimeFormatter&apos;&#x0D;&#x0A;- Original element: &apos;com.jlp.format.FormatTime.mintues&apos;&#x0D;&#x0A;- Renamed element: &apos;com.jlp.format.FormatTime.minutes&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;mintues&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;com.jlp.format{FormatTime.java[FormatTime^mintues" name="minutes" references="true" setter="false" stamp="1552976651185" textual="false" version="1.0"/>
+</session>

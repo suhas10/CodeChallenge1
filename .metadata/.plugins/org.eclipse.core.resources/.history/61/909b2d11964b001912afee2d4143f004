@@ -1,0 +1,19 @@
+package com.jlp;
+
+import java.util.Scanner;
+
+import com.jlp.format.TimeConverter;
+
+public class App {
+	public static void main(String[] args) {
+		
+			TimeConverter time = new TimeConverter();	
+			Scanner input = new Scanner(System.in);
+			int seconds;
+			System.out.println("Please enter the number");
+			seconds = input.nextInt();
+			System.out.println("Formated Time:");
+			System.out.println( time.formatTime(seconds));
+			input.close();		
+	}//main()
+}

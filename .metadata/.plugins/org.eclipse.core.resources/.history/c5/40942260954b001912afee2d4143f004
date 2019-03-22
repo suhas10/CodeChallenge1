@@ -1,0 +1,14 @@
+package com.jlp;
+
+import java.io.BufferedReader;
+
+import com.jlp.format.TimeConverter;
+
+public class App {
+	public static void main(String[] args) {
+		TimeConverter time = new TimeConverter();	
+		BufferedReader input
+		System.out.println( time.formatTime(86450123));
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.jlp;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import com.jlp.format.TimeConverter;
+
+public class App {
+	public static void main(String[] args) {
+		TimeConverter time = new TimeConverter();	
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		int seconds;
+		System.out.println("Please enter the number");
+		seconds = Integer.parseInt(input.readLine());		
+		System.out.println( time.formatTime(86450123));
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.jlp.format;
+
+import java.util.ArrayList;
+
+public class TimeComponents {
+		private String timeComponents,value;
+	
+		public TimeComponents() {
+			
+		}
+		public TimeComponents(String value,String timeComponents) {
+			this.timeComponents = timeComponents;
+			this.value = value;
+		}
+		
+		public String getTimeComponents() {
+			return timeComponents;
+		}
+		
+		public TimeComponents setTimeComponents(String timeComponents) {
+			this.timeComponents = timeComponents;
+			return new TimeComponents();
+		}
+
+		public void setValue(String value) {
+			this.value = value;
+		}
+
+		public String getValue() {
+			return value;
+		}
+}

@@ -1,0 +1,23 @@
+package com.jlp.format;
+
+public class TimeComponents {
+		private String timeComponents,value;
+	
+		public TimeComponents(String value,String timeComponents) {
+			this.timeComponents = timeComponents;
+			this.value = value;
+		}
+		
+		public String getTimeComponents() {
+			return timeComponents;
+		}
+		public void setTimeComponents(String timeComponents) {
+			this.timeComponents = timeComponents;
+		}
+		public void setValue(String value) {
+			this.value = value;
+		}
+		public String getValue() {
+			return value;
+		}
+}

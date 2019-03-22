@@ -1,0 +1,24 @@
+package com.jlp.format;
+
+public class FormatTime {
+	private String output;
+	private Integer remainingSeconds,year,day,hour,mintues,seconds;
+	
+	public void getTime(Integer seconds) 
+	{
+		if(seconds == 0 ) 
+		{
+			output += "none";
+		}//if
+		
+		day = seconds / (3600 * 24);
+		
+		remainingSeconds = seconds - (day* 3600 * 24) ;
+		
+		hour = remainingSeconds /3600 ;
+		
+		remainingSeconds = remainingSeconds - (hour *3600);
+		
+		remainingSeconds %= 60;
+	}//getTime()
+}

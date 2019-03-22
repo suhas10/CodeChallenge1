@@ -1,0 +1,20 @@
+package com.jlp.format;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.jlp.format.TimeConverter;
+
+class TestTimeConverter {
+
+	@Test
+	void testForSeconds() {
+		assertEquals("1 second", new TimeConverter().formatTime(1));
+	}
+	@Test
+	void testForMinute() {
+		assertEquals("1 minute", new TimeConverter().formatTime(60));
+		assertEquals("59 minutes",new TimeConverter().formatTime(3540));
+	}
+	
+}

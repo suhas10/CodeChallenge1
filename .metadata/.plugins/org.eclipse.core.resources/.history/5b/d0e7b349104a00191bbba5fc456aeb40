@@ -1,0 +1,13 @@
+package com.jlp.test;
+
+import com.jlp.format.FormatTime;
+
+public class App {
+
+	public static void main(String[] args) {
+		FormatTime time = new FormatTime();
+		time.getTime(200000);
+		time.display();
+	}
+
+}

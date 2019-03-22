@@ -1,0 +1,126 @@
+package com.jlp.format;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class TimeConverter
+{
+	Map<Integer,ArrayList<String>> timeMap = new LinkedHashMap<Integer, ArrayList<String>>();
+	private String output="";
+	private Integer remainingSeconds,years,days,hours,minutes;
+
+	public String getOutput() {
+		return output;
+	}
+
+	public void setOutput(String output) {
+		this.output = output;
+	}
+
+	public String formatTime(Integer inputSeconds) 
+	{
+		this.remainingSeconds = inputSeconds;
+
+		if(inputSeconds == 0 ) 
+		{
+			output += "none";
+		}	
+		else 
+		{
+			years = remainingSeconds / (3600 * 24 * 365);
+			remainingSeconds = remainingSeconds - (years * 3600 * 24 * 365) ;
+
+			days = remainingSeconds / (3600 * 24);
+			remainingSeconds = remainingSeconds - (days* 3600 * 24) ;
+
+			hours = remainingSeconds /3600 ;
+			remainingSeconds = remainingSeconds - (hours *3600);
+
+			minutes = remainingSeconds/60 ;
+			remainingSeconds = remainingSeconds - (minutes * 60);
+
+			/*ArrayList<String> timeList = new ArrayList<String>();*/	
+			/*timeList.add(new TimeComponents().setTimeComponents("")years.toString());*/
+
+			ArrayList<TimeComponents> timeList = new ArrayList<TimeComponents>();
+
+			if(years > 0 )
+			{
+				if(years == 1){
+					timeList.add(new TimeComponents(years.toString(), "year" ));
+				}
+				else {
+					timeList.add(new TimeComponents(years.toString(), "years" ));
+				}
+			}//year
+			if(days > 0 ) {
+
+				if(days == 1){
+					timeList.add(new TimeComponents(days.toString(), "day" ));
+				}
+				else {
+					timeList.add(new TimeComponents(days.toString(), "days" ));
+				}
+			}//days
+
+			if(hours > 0 ) {
+				if(hours == 1){
+					timeList.add(new TimeComponents(hours.toString(), "hours" ));
+				}
+				else {
+					timeList.add(new TimeComponents(hours.toString(), "hour" ));
+				}
+			}//hours
+
+			if(minutes > 0 ) {
+				if(minutes == 1){
+					timeList.add(new TimeComponents(minutes.toString(), "minute" ));
+				}
+				else {
+					timeList.add(new TimeComponents(minutes.toString(), "minutes" ));
+				}
+			}//minutes
+
+
+			if(remainingSeconds > 0) {
+
+				if(remainingSeconds == 1) 
+				{
+					timeList.add(new TimeComponents(remainingSeconds.toString(), "second" ));
+					/*timeList.add(new TimeComponents().setTimeComponents(remainingSeconds.toString()) );
+					 * using setter and returning the type of TimeComponet but is inefficient as more calls and more memory loss
+					 * */
+				}
+				else 
+				{
+					timeList.add(new TimeComponents(remainingSeconds.toString(), "seconds" ));
+				}
+			}//seconds
+			int temp = timeList.size();
+			if(timeList.size() == 1 ) {
+				output += timeList.get(0).getValue() + " ";
+				output += timeList.get(0).getTimeComponents();
+			}
+
+			else {
+				for(int i =0 ;i < timeList.size() ;i++)
+				{	
+					output += timeList.get(i).getValue()+" ";
+					output += timeList.get(i).getTimeComponents();
+					if( i< timeList.size()-2 ){
+						output += ",";
+					}
+					temp--;
+					if(temp == 1)
+					{
+						output += " and ";
+					}
+				}//for
+			}//else
+
+		}//main else
+		return output;
+
+	}//formatTime()
+}

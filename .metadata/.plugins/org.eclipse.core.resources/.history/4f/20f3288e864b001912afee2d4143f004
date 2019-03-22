@@ -1,0 +1,7 @@
+package com.jlp.format;
+
+public class TimeComponents {
+		private String timeComponents,value;
+		public TimeComponents() {
+		}
+}
